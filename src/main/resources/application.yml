@@ -7,3 +7,11 @@
 
 spring:
   profiles: local
+
+
+hee:
+  name: heeName
+  age: ${random.int(0,100)}
+  fullName: ${hee.name} Kim
+  sessionTimeout: "25"
+  #서버포트 랜덤값은 0으로 주기

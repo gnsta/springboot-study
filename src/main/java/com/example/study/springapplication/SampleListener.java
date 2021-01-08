@@ -1,4 +1,4 @@
-package com.example.study;
+package com.example.study.springapplication;
 
 import org.springframework.boot.context.event.ApplicationStartedEvent;
 import org.springframework.boot.context.event.ApplicationStartingEvent;

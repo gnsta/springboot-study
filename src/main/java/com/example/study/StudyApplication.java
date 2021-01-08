@@ -1,15 +1,15 @@
 package com.example.study;
 
-import org.springframework.boot.Banner;
-import org.springframework.boot.SpringApplication;
+import com.example.study.externalsetting.ExProperties;
+import com.example.study.springapplication.SampleListener;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.core.env.Environment;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.io.PrintStream;
 
 
 @SpringBootApplication

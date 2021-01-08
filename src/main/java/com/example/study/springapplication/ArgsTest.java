@@ -1,5 +1,6 @@
-package com.example.study;
+package com.example.study.springapplication;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package com.example.study;
+package com.example.study.springapplication;
 
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

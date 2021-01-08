@@ -13,8 +13,58 @@ JVM옵션은 프로그램 argument가 아니다!
 - 애플리케이션 다 실행 된 후에 실행해야 할 것이 있다
 ex - SampleListener3
 ex- ArgsTest
+
 2, 외부 설정
+- 외부 설정 파일
+properties
+yaml
+환경변수
+커맨드 라인 아규먼트
+
+-우선순위
+1, 유저 홈 디렉토리에 있는 spring-boot-dev-tools.properties
+2, 테스트에 있는 @TestPropertySource
+3, @SpringBootTest 애노테이션의 properties 애트리뷰트
+4, 커맨드 라인 아규먼트
+5, SPRING_APPLICATION_JSON (환경 변수 또는 시스템 프로티) 에 들어있는 프로퍼티
+6, ServletConfig 파라미터
+7, ServletContext 파라미터
+8, java:comp/env JNDI 애트리뷰트
+9, System.getProperties() 자바 시스템 프로퍼티
+10, OS 환경 변수
+11, RandomValuePropertySource
+12, JAR 밖에 있는 특정 프로파일용 application properties
+13, JAR 안에 있는 특정 프로파일용 application properties
+14, JAR 밖에 있는 application properties
+15, JAR 안에 있는 application properties
+16, @PropertySource
+17, 기본 프로퍼티 (SpringApplication.setDefaultProperties)
+ex - Setting1, StudyApplicationTests
+
+- aproperties 파일 놓을 수 있는 곳(우선순위 순)
+1, file:./config/
+2, file:./
+3, classpath:/config/
+4, classpath:/
+
+-@ConfigurationProperties
+여러 프로퍼티를 묶어서 읽을 수 있음
+ex - ExProperties
+융통성 있는 바인딩 - full_name, full-name 가능
+타입 converting
+@Value사용하면 Spring Expression Language 사용 가능
+
 3, 프로파일
+- @Profile
+@Configuration, @Component
+ex - BaseConfiguration, @TestConfiguration
+
+- 프로파일 활성화
+spring.profiles.active
+
+-프로파일용 프로퍼티
+application-{profile}.properties
+
 4, 로깅
 5, 테스트
 6, Spring-Dev-Tools

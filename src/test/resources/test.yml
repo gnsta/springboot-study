@@ -1,0 +1,8 @@
+spring:
+  profiles: test
+
+hee:
+  name: testName
+  age: ${random.int(0,100)}
+  fullName: ${hee.name} Kim
+  sessionTimeout: "25"
