@@ -1,0 +1,27 @@
+핵심
+1, SpringApplication
+- vm 혹은 argument 설정 들어가서 디버그 하기
+- 배너만들기
+- SpringApplication/ SpringApplicationBuilder 클래스의 사용
+- SpringApplications Event
+(시작, 컨텍스트 만들었을 때, 잘 구동이 됐을 때...)
+ex- SampleListener,SampleListener2
+- WebApplication 타입 지정
+servelt(mvc), webfulx(reactive) 둘 다 있으면 서블릿으로 동작함으로 webfulx 사용 시에는 reactive로 설정
+- VM option과 프로그램 argument
+JVM옵션은 프로그램 argument가 아니다!
+- 애플리케이션 다 실행 된 후에 실행해야 할 것이 있다
+ex - SampleListener3
+ex- ArgsTest
+2, 외부 설정
+3, 프로파일
+4, 로깅
+5, 테스트
+6, Spring-Dev-Tools
+
+각종 기술 연동
+1, 스프링 웹 MVC
+2, 스프링 데이터
+3, 스프링 시큐리티
+4. Rest Api 클라이언트
+5, 다루지 않은 기술들
