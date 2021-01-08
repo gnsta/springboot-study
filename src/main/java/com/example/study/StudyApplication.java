@@ -1,9 +1,15 @@
 package com.example.study;
 
+import org.springframework.boot.Banner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.io.PrintStream;
 
 
 @SpringBootApplication
@@ -50,8 +56,16 @@ public class StudyApplication {
 
 //        SpringApplication.run(StudyApplication.class, args);
 
+//        SpringApplication app = new SpringApplication(StudyApplication.class);
+//        app.setBannerMode(Banner.Mode.OFF);
+//        app.setAdditionalProfiles(APPLICATION_LOCATIONS);
+//        app.run(args);
+
         new SpringApplicationBuilder(StudyApplication.class)
+                .banner((environment, sourceClass, out) -> System.out.println("hee banner"))
                 .properties(APPLICATION_LOCATIONS)
+                .listeners(new SampleListener())
+                .web(WebApplicationType.SERVLET)
                 .run(args);
     }
 
